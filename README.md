@@ -1,7 +1,7 @@
 # BakPlus
+<p align="center"><img src="https://github.com/Fedrix42/BakPlus/blob/main/GHLogo.png" alt="BakPlus Logo" width="400" height="250"></p>
+<img src="https://github.com/Fedrix42/BakPlus/blob/main/Dark.png" alt="BakPlus GUI Dark">
 
-<img src="https://github.com/Fedrix42/BakPlus/blob/main/GHLogo.png" alt="BakPlus Logo" width="600" height="450">
-![BakPlus GUI Dark](https://github.com/Fedrix42/BakPlus/blob/main/Dark.png)
 Simple and easy to use backup software to make incremental backups on local folders.
 
  # Features
