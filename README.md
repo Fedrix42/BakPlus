@@ -1,7 +1,7 @@
 # BakPlus
 
 <img src="https://github.com/Fedrix42/BakPlus/blob/main/GHLogo.png" alt="BakPlus Logo" width="600" height="450">
-
+![BakPlus GUI Dark](https://github.com/Fedrix42/BakPlus/blob/main/Dark.png)
 Simple and easy to use backup software to make incremental backups on local folders.
 
  # Features
@@ -15,7 +15,7 @@ Simple and easy to use backup software to make incremental backups on local fold
 # Dependencies
  - https://github.com/srikanth-lingala/zip4j
  - https://github.com/JFormDesigner/FlatLaf/blob/main/LICENSE
- - 
+
 Thanks a lot to the creator of these projects which helped in the development of this product.
 
 # Supported Platform
