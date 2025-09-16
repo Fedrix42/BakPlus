@@ -21,13 +21,13 @@ Simple and easy to use backup software to make **incremental backups** on local 
 
 Required [Java 8](https://www.java.com/it/download/) or latest version.
 If you already got **a Java SDK or Java SE installation** you can try to run it with the version you have.
-If you want to run it by cli: *java -jar BakPlus-<version>-fat.jar*
+If you want to run it by cli: *java -jar BakPlus-(version)-fat.jar*
 
 # Installation
 
  - Download the latest release by going to the release section
  - Extract the downloaded archive in the folder where you want to put the software (Ex. C:\Programs Files\)
- - BakPlus-<version>-fat.jar is ready to be executed with java, you can create a link to the desktop if you want
+ - BakPlus-(version)-fat.jar is ready to be executed with java, you can create a link to the desktop if you want
 
 # Environment
 
