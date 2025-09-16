@@ -1,6 +1,7 @@
 # BakPlus
-<p align="center"><img src="https://github.com/Fedrix42/BakPlus/blob/main/GHLogo.png" alt="BakPlus Logo" width="400" height="250"></p>
-<img src="https://github.com/Fedrix42/BakPlus/blob/main/Dark.png" alt="BakPlus GUI Dark">
+<p align="center"><img src="https://github.com/Fedrix42/BakPlus/blob/main/images/GHLogo.png" alt="BakPlus Logo" width="400" height="250"></p>
+<img src="https://github.com/Fedrix42/BakPlus/blob/main/images/Dark.png" alt="BakPlus GUI Dark">
+<img src="https://github.com/Fedrix42/BakPlus/blob/main/images/strategy.png" alt="Strategy Creation Window">
 
 Simple and easy to use backup software to make **incremental backups** on local folders.
 
@@ -10,6 +11,7 @@ Simple and easy to use backup software to make **incremental backups** on local 
  - Multiple **backup strategies management** to save time
  - AES256 and Zip Standard encryption
  - None or Deflate compression
+ - *Exclusion filter* of files and folders based on **Regular Expression**
  - Automatic **integrity check** by comparing SHA256
 
 # Supported Platform
