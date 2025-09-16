@@ -26,8 +26,8 @@ If you want to run it by cli: *java -jar BakPlus-(version)-fat.jar*
 # Installation
 
  - Download the latest release by going to the release section
- - Extract the downloaded archive in the folder where you want to put the software (Ex. C:\Programs Files\)
- - BakPlus-(version)-fat.jar is ready to be executed with java, you can create a link to the desktop if you want
+ - Put the downloaded jar file where you want (Ex. C:\Programs Files\)
+ - BakPlus-(version)-fat.jar is ready to be executed with java, you can create a link to the desktop
 
 # Environment
 
