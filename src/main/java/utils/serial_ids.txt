@@ -1,0 +1,7 @@
+Settings: 1
+Strategy: 3
+    Target: 4
+    Destination: 5
+    EvaluablePath: 6
+Journal: 8
+    Checksum: 9
