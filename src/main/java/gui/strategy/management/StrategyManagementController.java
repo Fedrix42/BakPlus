@@ -43,15 +43,8 @@ public class StrategyManagementController extends StrategyController {
             
             // Editing strategy in disk 
             StrategyManager.writeToDisk(toEdit);
-            if(StrategyManager.isCurrentLoaded()){
-                if(toEdit.getId() == StrategyManager.getCurrentlyLoaded().getId() || !old.getName().equals(newName)){
-                    ControllerFactory.getController(MainWindowController.class).updateView();
-                    NotificationManager.notify(view, new SimpleNotification("Strategy edited and list reloaded!"));
-                }
-            }
-            else
-                NotificationManager.notify(view, new SimpleNotification("Strategy edited!"));
-            
+            ControllerFactory.getController(MainWindowController.class).updateView();
+            NotificationManager.notify(view, new SimpleNotification("Strategy edited!"));
         } catch (StrategyInvalidNameException ex) {
             var not = new SimpleNotification("The name of the strategy with id: %d is not valid!".formatted(toEdit.getId()), Level.INFO);
             NotificationManager.notify(view, not); 

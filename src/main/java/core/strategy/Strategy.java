@@ -35,7 +35,7 @@ import java.util.regex.Pattern;
  */
 public class Strategy extends StatedExternalizable {
     private static final long serialVersionUID = 3L;
-    public static transient final String NAME_REGEX = "(?<stgname>[a-zA-Z]\\w*)";
+    public static transient final String NAME_REGEX = "(?<stgname>[a-zA-Z][\\s\\w]*)";
     public static transient final String ID_REGEX = "(?<stgid>[0-9]+)";
     public static transient final int MIN_INCREMENTAL_LIMIT = 0;  // Incluse
     public static transient final int MAX_INCREMENTAL_LIMIT = 10; // Incluse

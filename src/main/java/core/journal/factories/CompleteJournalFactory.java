@@ -23,20 +23,20 @@ public class CompleteJournalFactory {
     
     /**
      * Compute a complete journal for a specific strategy.
-     * @param strategyID
+     * @param strategy
      * @see make()
      * @return an empty or filled complete journal
      */
-    public static Journal make(long strategyID) {
+    public static Journal make(Strategy strategy) {
         try {
-            return (Journal) SerializerFactory.getObjectSerializer().deserialize(JournalPath.getOfComplete(strategyID));
+            return (Journal) SerializerFactory.getObjectSerializer().deserialize(JournalPath.getOfComplete(strategy.getId()));
         } catch (ClassNotFoundException | IOException exception){
             try {
                 // Trying rebuilding journal by making the union of partial journals
                 List<Path> partialJournalPaths = FilePatternFinder.search(
-                    JournalPath.getJournalsFolder(strategyID), FilenameFormats.JOURNAL_PARTIAL_TYPE_PATTERN, "stgid", Long.toString(strategyID));
+                    JournalPath.getJournalsFolder(strategy.getId()), FilenameFormats.JOURNAL_PARTIAL_TYPE_PATTERN, "stgid", Long.toString(strategy.getId()));
                 if(!partialJournalPaths.isEmpty()){
-                    Journal complete = new Journal(strategyID, JournalType.COMPLETE);
+                    Journal complete = new Journal(strategy, JournalType.COMPLETE);
                     for(Path partialJournalPath : partialJournalPaths){
                         complete = complete.union((Journal) SerializerFactory.getObjectSerializer().deserialize(partialJournalPath));
                     }
@@ -49,7 +49,7 @@ public class CompleteJournalFactory {
                 LoggerManager.exception().log(Level.WARNING, "Error casting journal path to journal object", ex);
             }
         }
-        return new Journal(strategyID, JournalType.COMPLETE);
+        return new Journal(strategy, JournalType.COMPLETE);
     }
     
     /**
@@ -58,7 +58,7 @@ public class CompleteJournalFactory {
      * @return an empty or filled complete journal
      */
     public static Journal make(){
-        return make(requireNonNull(StrategyManager.getCurrentlyLoaded()).getId());
+        return make(requireNonNull(StrategyManager.getCurrentlyLoaded()));
     }
     
 }

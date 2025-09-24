@@ -89,7 +89,7 @@ public class PartialJournalFactory  {
         requireNonNull(completeJ);
         requireNonNull(cls);
         PartialJournalFactory.completeJ = completeJ;
-        PartialJournalFactory.journal = new Journal(cls.getId(), JournalType.PARTIAL);
+        PartialJournalFactory.journal = new Journal(cls, JournalType.PARTIAL);
         PartialJournalFactory.filesList = new LinkedList<>();
         List<Path> targets = cls.getTargetsPathList();
         

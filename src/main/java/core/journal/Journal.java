@@ -2,6 +2,7 @@ package core.journal;
 
 
 import core.journal.utils.Checksum;
+import core.strategy.Strategy;
 import core.strategy.StrategyManager;
 import io.serialization.StatedExternalizable;
 import java.io.IOException;
@@ -62,7 +63,25 @@ public class Journal extends StatedExternalizable implements Iterable {
      */
     public Journal(){}
     
-    public Journal(long strategyID, JournalType type){
+    /**
+     * Journal contructor for a strategy and of a specific type
+     * @param strategy
+     * @param type 
+     */
+    public Journal(Strategy strategy, JournalType type){
+        this.strategyID = strategy.getId();
+        this.created = LocalDateTime.now();
+        this.type = type;
+        this.size = 0;
+        files = new HashMap<>();
+    }
+    
+    /**
+     * Private constructor which is used by union operator
+     * @param strategyID
+     * @param type 
+     */
+    private Journal(long strategyID, JournalType type){
         this.strategyID = strategyID;
         this.created = LocalDateTime.now();
         this.type = type;
